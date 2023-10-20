@@ -76,9 +76,9 @@ document.write(`A: ${a} B: ${b} <br/>`)
 // escrever o percentual que cada um representa em relação ao total
 // de eleitores.
 
-const votosTotal = Number(prompt('Total de votos:'))
-const votosBranco = Number(prompt('Total de votos brancos:'))
-const votosNulo = Number(prompt('Total de votos nulos:'))
+const votosTotal = 134
+const votosBranco = 34
+const votosNulo = 32
 
 const brancoPerCent = (votosBranco/votosTotal)*100
 const nuloPerCent = (votosBranco/votosTotal)*100
