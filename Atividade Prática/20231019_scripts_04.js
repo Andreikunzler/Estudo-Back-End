@@ -130,10 +130,10 @@ document.write(`Nome:${nome} Idade:${idade} ano que nasceu : ${2023 - idade} <br
 // b. “Número é impar!”, se o valor armazenado for ímpar;
 
 const numero10 = 10
-if(numero % 2 === 0) {
-    document.write(`O numero ${numero} é PAR!<br/>`)
+if(numero10 % 2 === 0) {
+    document.write(`O numero ${numero10} é PAR!<br/>`)
 } else {
-    document.write(`O numero ${numero} é INPAR!<br/>`)
+    document.write(`O numero ${numero10} é INPAR!<br/>`)
 }
 
 // 12. Escreva um algoritmo que armazene o ano atual e o ano de
@@ -144,7 +144,7 @@ if(numero % 2 === 0) {
 const anoAtual = 2023
 const anoNascimento = 2000
 const idade2 = anoAtual - anoNascimento
-if(numero >= 16) {
+if(idade2 >= 16) {
     document.write(`Você pode votar!<br/>`)
 } else {
     document.write(`Você não pode votar!<br/>`)
