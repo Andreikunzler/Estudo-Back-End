@@ -120,7 +120,7 @@ if(maças >= 12) {
 // em 2000”.
 // OBS: Pegue o ano atual como base
 
-const nome = Andrei
+const nome = 'Andrei'
 const idade = 23
 document.write(`Nome:${nome} Idade:${idade} ano que nasceu : ${2023 - idade} <br/> `)
 
