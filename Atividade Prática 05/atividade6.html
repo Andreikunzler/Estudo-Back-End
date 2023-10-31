@@ -1,0 +1,14 @@
+<script>
+  let larguraT = Number(prompt("Digite a largura do terreno"))
+  let comprimentoT = Number(prompt("Digite o comprimento do terreno"))
+  let resultT = larguraT * comprimentoT;
+
+  if (resultT < 100) {
+    document.write("Terreno popular")
+  } else if (resultT >= 100 && resultT <= 500) {
+    document.write("Terreno Master")
+  } else {
+    document.write("Terreno VIP")
+  }
+
+</script>

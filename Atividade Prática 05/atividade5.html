@@ -1,0 +1,9 @@
+<script>
+  const distancia = Number(prompt('Insira a distancia em km'))
+
+  if (distancia <= 200) {
+    document.write(`Valor da passagem é R$${(distancia * 0.5).toFixed(2).replace(".", ",")}`)
+  } else {
+    document.write(`Valor da passagem é R$${(distancia * 0.45).toFixed(2).replace(".", ",")}`)
+  }
+</script>
