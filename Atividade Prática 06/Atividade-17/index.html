@@ -1,0 +1,19 @@
+<script>
+const votosTotal = Number(prompt('Digite o total de Eleitores'))
+let Restantes = votosTotal
+let votosValidos
+let votosBrancos 
+let votosNulos 
+votosValidos = Number(prompt('Digite o total de votos válidos'))
+while(Restantes < votosValidos){votosValidos = Number(prompt('Digite o total de votos válidos corretamente'))}
+Restantes = Restantes - votosValidos
+votosBrancos = Number(prompt('Digite o total de votos brancos'))
+while(Restantes < votosBrancos){votosBrancos = Number(prompt('Digite o total de votos brancos corretamente'))}
+Restantes = Restantes - votosBrancos
+votosNulos = Number(prompt('Digite o total de votos nulos'))
+while(Restantes < votosNulos){votosNulos = Number(prompt('Digite o total de votos nulos corretamente'))}
+
+document.write(`Votos válidos ${(votosValidos/votosTotal*100).toFixed(2)}%<br>`)
+document.write(`Votos brancos ${(votosBrancos/votosTotal*100).toFixed(2)}%<br>`)
+document.write(`Votos nulos ${(votosNulos/votosTotal*100).toFixed(2)}%<br>`)
+</script>

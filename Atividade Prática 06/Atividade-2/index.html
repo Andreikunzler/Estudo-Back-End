@@ -1,0 +1,14 @@
+<script>
+  const idade = Number(prompt('Qual é a sua idade?'))
+
+  if(idade >= 18){
+    const carteira = confirm('Você é habilitado?')
+    if(carteira){
+      document.write(`Pode dirigir`)
+    } else {
+      document.write(`Não pode dirigir`)
+    }
+  } else{
+    document.write(`Não pode dirigir`)
+  }
+</script>

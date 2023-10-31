@@ -1,0 +1,15 @@
+<script>
+  let altura = Number(prompt('Digite sua altura'))
+  let sexo = Number(prompt('Digite 1 se é mulher e 2 se voce é homem.'))
+  switch (sexo) {
+    case 1:
+    document.write(`Peso ideal para você mulher: ${((62.1*altura)-44.7).toFixed(2).replace('.',',')}Kg`)
+        break
+    case 2:
+        document.write(`Peso ideal para você homem: ${((72.7*altura)-58).toFixed(2).replace('.',',')}Kg`)
+        break
+    default:
+        document.write("Campo sexo não foi preenchido corretamente!")
+  }
+
+</script>

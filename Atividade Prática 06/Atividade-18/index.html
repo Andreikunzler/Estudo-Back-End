@@ -1,0 +1,14 @@
+<script>
+const Compra = Number(prompt('Digite o valor da compra'))
+const avista = confirm('Seu pagamento vai ser avista?')
+let numerodeparcelas
+
+if (avista == true){
+  document.write(`Preço total R$${(Compra*0.975).toFixed(2).replace('.',',')}`)
+} else  {
+  numerodeparcelas = Number(prompt('Digite o Numero de parcelas'))
+  if(numerodeparcelas >= 2 && numerodeparcelas<=5){document.write(`Preço total R$${Compra.toFixed(2).replace('.',',')}`)}
+  if(numerodeparcelas >= 6 && numerodeparcelas<=10){document.write(`Preço total R$${(Compra*1.06).toFixed(2).replace('.',',')}`)}
+  if(numerodeparcelas >= 11 && numerodeparcelas<=15){document.write(`Preço total R$${(Compra*1.13).toFixed(2).replace('.',',')}`)}
+}
+</script>

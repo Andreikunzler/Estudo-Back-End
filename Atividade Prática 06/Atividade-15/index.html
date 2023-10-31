@@ -1,0 +1,13 @@
+<script>
+const ladoA = Number(prompt('Digite o lado A'))
+const ladoB = Number(prompt('Digite o lado B'))
+const ladoC = Number(prompt('Digite o lado C'))
+if (ladoA < ladoB + ladoC && ladoB < ladoA + ladoC && ladoC < ladoA + ladoB) {
+    document.write('É possivel formar um triângulo!<br>')
+    if (ladoA == ladoB || ladoB == ladoC || ladoA == ladoC) {document.write('Triângulo isósceles')}
+    if (ladoA !== ladoB && ladoB !== ladoC && ladoA !== ladoC) {document.write('Triângulo escaleno')}
+    if (ladoA == ladoB && ladoB == ladoC) {document.write('Triângulo equilátero')}
+} else {
+    document.write('Não é possivel formar um triângulo!')
+}
+</script>
