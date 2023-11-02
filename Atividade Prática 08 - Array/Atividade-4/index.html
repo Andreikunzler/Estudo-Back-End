@@ -1,0 +1,15 @@
+<script>
+// 1. Desenvolva um algoritmo para percorrer um vetor de 15 elementos
+// inteiros já preenchido e imprima todos os valores pares.
+
+let numeros = [1,2,3,4,5,6,17,8,9,10]
+let numeroDigitado = Number(prompt('Adivinhe o número!'))
+let acerto = 'Você errou'
+for(let numero of numeros){
+    if(numero === numeroDigitado){
+      acerto = 'Você acertou'
+    }
+  }
+  document.write(`${acerto}<br>`)
+
+</script>

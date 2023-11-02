@@ -1,0 +1,122 @@
+
+<script>
+// ARRAY
+
+// let objetos = [ // ainda iremos ver sobre
+//     {},
+//     {}
+// ]
+
+
+// let listasCompras2 = new Array () // Estilo menos ususal de se utilizar Array
+
+// let contagemArray = [0, 1, 2, 3, 4]
+// a contagem do array começa pelo 0. 0 indica o primeiro item do array, 1 o segundo e assim por diante
+
+let listaCompras = ['Maçã', 'Banana', 'Uva', 'Morango', 'Abacaxi']
+console.log(listaCompras[0]) // mostra "Maçã"
+console.log(listaCompras[1]) // mostra "Banana"
+console.log(listaCompras[3]) // mostra "Uva"
+
+
+console.log(listaCompras.length) // mostra o total de itens do array
+
+
+for (let i = 0; i < listaCompras.length; i++) {
+    console.log(listaCompras[i])
+}
+
+
+let indice = 2
+while (indice < listaCompras.length) {
+    console.log(`While: ${listaCompras[indice]}`)
+    indice++
+}
+
+
+for (let item of listaCompras) { // for of para percorrer itens do array
+    console.log(`item: ` + item)
+}
+
+listaCompras.push('Laranja') // adiciona o item como o último na lista de array
+
+console.log(listaCompras)
+
+listaCompras.pop() // remove o último elemento do array
+
+console.log(listaCompras)
+
+listaCompras.shift() // remove o primeiro do array
+
+console.log(listaCompras)
+
+listaCompras.unshift('Ameixa') // adiciona o item como primeiro no array
+
+console.log(listaCompras)
+
+let posicao = listaCompras.indexOf('Banana') // descreve a posição do item solicitado
+console.log(posicao)
+
+console.log(listaCompras.join(' - ')) // transforma em string e modifica o separador de cada item
+
+
+let linguagens = [] // declaração de um array vazio
+linguagens[0] = "Javascript" // adição de itens no array
+linguagens[1] = "Java"
+linguagens[2] = "Python"
+console.log(linguagens.join(' - '))
+linguagens[1] = "C++" // essa adição, substituiu o item 1 anterior
+console.log(linguagens.join(' - '))
+
+
+
+//
+let matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+console.log(matriz)
+
+for (let i=0; i < matriz.length; i++) {
+    for (let j=0; j < matriz[i].length; j++) {
+        console.log(`matriz for: ${matriz[i][j]}`)
+    }
+}
+
+for (let linha of matriz) { // for of para percorrer itens por linha e elementos de cada linha do array
+    for (let elemento of linha) {
+        console.log(`forof matriz: ${elemento}`)
+    }
+}
+
+
+const copasBrasil = [1958, 1962, 1970, 1994, 2002]
+
+for (let ano of copasBrasil) {
+    console.log(`O Brasil ganhou a copa de ${ano}`)
+}
+
+console.log(`O Brasil ganhou as copas de ${copasBrasil.join(', ')}.`)
+
+
+// let listaCompras = ['Maçã', 'Banana', 'Uva', 'Morango', 'Abacaxi']
+for (let fruta of listaCompras) {
+    console.log(fruta)
+    
+    if (fruta === 'Uva') { // método de fazer o for of percorrer somente até o item desejado
+        break;
+    }
+}
+
+
+// FOR EACH
+listaCompras.forEach(function(fruta){
+    console.log(`forEach: ${fruta}`)
+})
+
+listaCompras.forEach((fruta) => {
+    console.log(`forEach =>: ${fruta}`)
+})
+</script>

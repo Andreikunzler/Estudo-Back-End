@@ -1,0 +1,32 @@
+
+<script>
+// 3. Utilizar os métodos push, pop, unshift e shift para manipular um
+// array
+// a. Crie um array com o nome "frutas" e adicione 3 tipos de frutas
+// de sua escolha
+// b. Utilize o método push para adicionar uma fruta no final do
+// array
+// c. Utilize o método pop para remover a última fruta do array
+// d. Utilize o método unshift para adicionar uma fruta no início do
+// array
+// e. Utilize o método shift para remover a primeira fruta do array
+// f. Exiba o array resultante na tela
+ let frutas = ['Maça','Banana','Melão']
+for(let fruta1 of frutas){
+   document.write(`Lista inicial ${fruta1}<br>`)
+  }
+//  frutas.push('Abacate')
+//  frutas.pop()
+//  frutas.shift()
+//  for(let fruta of frutas){
+//     document.write(`Lista Final ${fruta}<br>`)
+//  }
+ frutas.push(prompt('Adicione uma fruta'))
+ if(confirm('Quer apague uma fruta?') === true){ frutas.pop()}
+ frutas.unshift(prompt('Adicione uma fruta'))
+ if(confirm('Quer apague uma fruta?') === true){ frutas.shift()}
+ for(let fruta2 of frutas){
+  document.write(`Lista final ${fruta2}<br>`)
+ }
+
+</script>
