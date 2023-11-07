@@ -1,11 +1,13 @@
 <script>
-//     2. Desenvolva um algoritmo para percorrer um vetor de 20 elementos
-// inteiros e no final mostre a soma de todos os elementos.
+// 5. Escreva um algoritmo que solicite ao usuário a entrada de 5 nomes,
+// e que exiba a lista desses nomes na tela. Após exibir essa lista, o
+// programa deve mostrar também os nomes na ordem inversa em
+// que o usuário os digitou.
     
-    let numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-    let soma = 0
-    for(let numero of numeros){
-        soma += numero
-      }
-    document.write(`${soma}<br>`)
+    let nomes = []
+    while(nomes.length < 5){
+      nomes.push(prompt('Digite os nomes'))
+    }
+    document.write(nomes.reverse())
+  
     </script>

@@ -2,7 +2,23 @@
 <script>
 // 3. Desenvolva um algoritmo que preenche um vetor com os 4
 // primeiros números perfeitos. -Imposivel de fazer
+let numerosPerfeitos =[]
+let numero = 10000
+let soma = 0
+let divisiveis = []
 
-
+for(let i = 1; i< numero; i++ ){
+    for(let j = 1; j < numero; j++){
+        if(i % j === 0 && i !== j){
+            soma += j
+        }
+    }
+    if(soma === i){
+        numerosPerfeitos.push(i)
+    }
+    soma = 0
+    divisiveis = []
+}
+ console.log(numerosPerfeitos)
 
 </script>
