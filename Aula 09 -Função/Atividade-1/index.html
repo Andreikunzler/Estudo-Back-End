@@ -1,0 +1,38 @@
+<script>
+// const aluno = {
+//   nome:'Andrei',
+//   idade: 23,
+//   curso: 'Engenheiro'
+// }
+// console.log(aluno.nome)
+// aluno.curso = prompt('Digito seu curso')
+// console.log(aluno.curso)
+// const filme = [{titulo:'Filme1', diretor: '2diretor1', genero: 'ficção'},
+// {titulo:'Filme2', diretor: '2diretor2', genero: 'ficção'},{titulo:'Filme3', diretor: '2diretor3', genero: 'ficção'},{titulo:'Filme4', diretor: '2diretor4', genero: 'ficção'},
+// {titulo:'Filme5', diretor: '2diretor5', genero: 'ficção'},]
+// for(let i of filme){
+//   console.log(`titulo: ${i.diretor}, genero: ${i.genero}, diretor: ${i.diretor}`)
+// }
+
+const pessoas = []
+let continuar = true
+while(continuar === true){
+ nome = prompt('Digite seu nome'),
+ idade = prompt('Digite sua idade'),
+ cidade = prompt('Digite sua cidade')
+
+const pessoa = {
+  nome,
+  idade,
+  cidade,
+}
+pessoas.push(pessoa)
+
+continuar = confirm('Deseja cadastrar mais alguem?')
+}
+
+for (let i of pessoas) {
+console.log(`Nome: ${i.nome}, Idade ${i.idade}, Cidade ${i.cidade}`) 
+}
+
+</script>
