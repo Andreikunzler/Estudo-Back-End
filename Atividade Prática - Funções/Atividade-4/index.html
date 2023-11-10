@@ -1,0 +1,22 @@
+<script>
+// 4. Crie uma função que recebe por parâmetro o tempo de duração de
+// uma fábrica expressa em segundos e retorna esse tempo em horas,
+// minutos e segundos.
+
+// Ex:
+// Entrada: 3672
+// Saída: 1:1:12
+
+function converterTempo(segundos) {
+    const horas = Math.floor(segundos / 3600)
+    segundos %= 3600
+    const minutos = Math.floor(segundos / 60)
+    segundos %= 60
+    return `${horas}: ${minutos} ${segundos}`
+}
+const tempoSegundos = 3672
+const tempoFormatado = converterTempo(tempoSegundos)
+
+console.log(converterTempo(tempoSegundos))
+console.log(converterTempo(tempoSegundos))
+</script>

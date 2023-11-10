@@ -1,0 +1,17 @@
+<script>
+// Crie uma função que recebe 3 notas de um aluno por parâmetro e
+// uma letra. Se a letra for A a função deve calcular a média aritmética,
+// se for P, a média ponderada (peso: 5, 3 e 2).
+const calculo = prompt(`Digite A a função deve calcular a média aritmética,
+se for P, a média ponderada`)
+const nota01 = prompt("Digite a primeira nota")
+const nota02 = prompt("Digite a segunda nota")
+const nota03 = prompt("Digite a terceira nota")
+function media (nota1, nota2, nota3) {
+    if (calculo === 'P'){return (nota1 + nota2 + nota3)/3}
+    if (calculo === 'A'){return (nota1*5 + nota2*3 + nota3*2)/10}
+    return null
+    }
+ const retunMedia = media(nota01, nota02, nota03)
+ console.log(retunMedia)
+</script>
