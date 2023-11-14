@@ -1,13 +1,18 @@
 <script>
-// 1. Crie um objeto em JavaScript para colocar dois atributos de um
-// produto. Atribua o preço e descrição do produto com o valor “90” e a
-// descrição com o valor “Mouse”. Mostre no console o valor dos dois
-// atributos.
+// 1. Considere o seguinte array:
+// const salarios = [5000.00, 5460.50, 3452.00, 6900.00, 7590.10, 8012.99,
+// 1290.00, 15000.00];
 
-const produto = {
-  preco: 90,
-  descricao:'mouse'
-}
-console.log(produto.preco)
-console.log(produto.descricao)
+const salarios = [5000.00, 5460.50, 3452.00, 6900.00, 7590.10, 8012.99,1290.00, 15000.00];
+
+// a. Imprima no console o índice do primeiro salário maior que
+// 7.500 utilizando o findIndex
+const salario7500 = salarios.findIndex(salario => salario >= 7500)
+console.log(salario7500)
+
+// b. Crie uma nova lista filtrada com os salários que são maior que
+// 8.000 utilizando o filter
+
+const salario8000 = salarios.filter(salario => salario >= 8000)
+console.log(salario8000)
 </script>

@@ -1,28 +1,30 @@
 <script>
-// 2. Crie um objeto em JavaScript para colocar 5 atributos de um
-// notebook. Atribua os seguintes atributos:
-// Processador = i7
-// Memória = 16GB
-// Preço = 5000
-// HD = 1TB
-// SSD = 256GB
-// Por fim, mostre o nome e valor de cada atributo no console,
-// exatamente como está na atividade.
+// 2. James estava criando uma array com as cores do arco-íris, e ele
+// esqueceu algumas cores. As cores padrão de um arco-íris são
+// normalmente listadas nesta ordem:
+// const rainbow = ["Vermelho", "Laranja", "Amarelo", "Verde", "Azul",
+// "Roxo"];
 
-const notebook = {
-  processador: 'i7',
-  memoria: '16GB',
-  preco: 5000,
-  hd: '1TB',
-  ssd: '256GB'
-}
+// mas James tinha isto:
+// const rainbow = ["Vermelho", "Laranja", "Preto", "Azul"];
 
-console.log(`
-  Processador = ${notebook.processador}
-  Memória = ${notebook.memoria}
-  Preço = ${notebook.preco}
-  HD = ${notebook.hd}
-  SSD = ${notebook.ssd}`
-  )
+// Usando somente o método splice insira as cores que faltam na array e
+// remova a cor "Preto", seguindo estes passos:
+
+// a. Remova "Preto"
+const rainbow = ["Vermelho", "Laranja", "Preto", "Azul"];
+const indexDelete = rainbow.findIndex((cor) => cor === "Preto")
+const rainbowDelete = rainbow.splice(indexDelete, 1)
+console.log(rainbowDelete)
+console.log(rainbow)
+
+// b. Adicione "Amarelo" e "Verde"
+const indexAddSpecific = rainbow.findIndex((cor) => cor === "Laranja")
+rainbow.splice((indexAddSpecific+1), 0,"Amarelo","Verde")
+console.log(rainbow)
+
+// c. Adicione "Roxo"
+rainbow.splice(rainbow.length, 0,"Roxo")
+console.log(rainbow)
 
     </script>

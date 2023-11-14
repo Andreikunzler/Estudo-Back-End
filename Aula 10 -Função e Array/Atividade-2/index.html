@@ -1,0 +1,46 @@
+<script>
+const biblioteca01 = []
+let continuar = true
+while(continuar === true){
+  titulo = prompt('Digite o titulo'),
+  autor = prompt('Digite o autor'),
+  paginas = prompt('Digite numero de páginas')
+  lido = false
+
+const livro = {
+  titulo,
+  autor,
+  paginas,
+  lido,
+}
+biblioteca01.push(livro)
+
+continuar = confirm('Deseja cadastrar mais alguem?')
+}
+
+for (let i of biblioteca01) {
+console.log(`Autor: ${i.autor}, Título ${i.titulo}, Nº paginas ${i.paginas}, lido ${i.lido}`) 
+}
+
+let tituloexcluido = prompt('Livro que você deseja excluir')
+
+const novabiblioteca = []
+
+for (let j of biblioteca01){
+    if(tituloexcluido === j.titulo){} 
+    else{novabiblioteca.push(j)} 
+}
+for (let x of novabiblioteca) {
+console.log(`Autor: ${x.autor}, Título ${x.titulo}, Nº paginas ${x.paginas}, lido ${x.lido}`) 
+}
+
+let titulolido = prompt('Livro que você macar como lido')
+
+for (let y of novabiblioteca){
+    if(titulolido === y.titulo){y.lido = true }  
+}
+for (let y of novabiblioteca) {
+console.log(`Autor: ${y.autor}, Título ${y.titulo}, Nº paginas ${y.paginas}, lido ${y.lido}`) 
+}
+
+</script>

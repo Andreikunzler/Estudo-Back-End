@@ -21,29 +21,55 @@
 // Pessoas empregadas com salários maiores que 2500:
 // Nome: Alessandro, Idade: 28, Salário: 2700
 // Nome: Alessandro, Idade: 28, Salário: 3000
-const pessoas = [
-    { nome: "João", sexo: "M", salario: 2500 },
-    { nome: "Maria", sexo: "F", salario: 3200 },
-    { nome: "Pedro", sexo: "M", salario: 2000 },
-    { nome: "Ana", sexo: "F", salario: 2800 },
-    { nome: "Carlos", sexo: "M", salario: 3500 }
-]
-pessoas.forEach(function(pessoa){
-    console.log(pessoa.nome)
-})
+const pessoas = []
+let continuar = true
+function  Cadastro () { 
+while(continuar === true){
+  const nome = prompt('Digite seu nome')
+  const idade = prompt('Digite sua idade')
+  const estaTrabalhando = confirm('Está trabalhando atualmente?')
+  let salario = 0
+  if(estaTrabalhando === true){
+    salario = prompt('Digite seu salário')
+  }
+const pessoa = {
+  nome,
+  idade,
+  estaTrabalhando,
+  salario,
+}
+pessoas.push(pessoa)
+continuar = confirm('Deseja cadastrar mais alguem?')
+}}
 
-const homen1 = pessoas.findIndex(function(pessoa){
-    return pessoa.sexo === "M"
-})
-console.log(homen1)
+Cadastro()
 
-const mulher1 = pessoas.find(function(pessoa){
-    return pessoa.sexo === "F"
-})
-console.log(mulher1)
+console.log(`Pessoas desempregadas:`)
+for (let i of pessoas) {
+  if(!i.estaTrabalhando){
+console.log(`
+Nome ${i.nome}
+Idade ${i.idade}
+`) 
+}}
 
-const salarioMaior = pessoas.filter(function(pessoa){
-    return pessoa.salario > 2500
-})
-console.log(salarioMaior)
+console.log(`Pessoas empregadas com salários menores que 2500:`)
+for (let i of pessoas) {
+  if(i.salario<2500 && i.estaTrabalhando){
+console.log(`
+Nome:${i.nome}
+Idade: ${i.idade}
+Salário: ${i.salario}
+`)
+}}
+
+console.log(`Pessoas empregadas com salários maiores que 2500:`)
+for (let i of pessoas) {
+  if(i.salario>=2500){
+console.log(`
+Nome:${i.nome}
+Idade: ${i.idade}
+Salário: ${i.salario}
+`)
+}}
 </script>
