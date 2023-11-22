@@ -92,7 +92,7 @@ while (menuInicialOpção == true) {
 function menuGestão () {
   escolha = Number(
     prompt(
-        `Bem vindo ao Sistema João: \nEscolha uma das opções para interagir com o sistema:\n1 - Listar todos produtos\n2 - Cadastrar produtos\n3 - Ver Pedidos\n4 - Editar produto \n5 - Remover um produto\n6 - Listar pedidos\n7 - Somar valor estoque\n8 - Relatório diário\n9 - Voltar\n`)
+        `Bem vindo ao Sistema João: \nEscolha uma das opções para interagir com o sistema:\n1 - Listar todos produtos\n2 - Cadastrar produtos\n3 - Editar produto \n4 - Remover um produto\n5 - Listar pedidos\n6 - Somar valor estoque\n7 - Relatório diário\n8 - Voltar\n`)
   );
   switch (escolha) {
     case 1:
@@ -102,24 +102,21 @@ function menuGestão () {
       cadastrar();
       break;
     case 3:
-      verPedido();
-      break;
-    case 4:
       editar();
       break;
-    case 5:2
+    case 4:
       remover();
       break;
-    case 6:
+    case 5:
       listarPedidos();
       break;
-    case 7:
+    case 6:
       somarValorEstoque();
       break;
-    case 8:
+    case 7:
       relatorioDiario();
       break;
-    case 9:
+    case 8:
       menuInicial();
       break;
   }
